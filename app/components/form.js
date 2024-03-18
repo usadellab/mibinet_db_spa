@@ -71,9 +71,8 @@ const Form = ({
 	const search = useSearchParams();
 	const forward = () => {
 		const params = new URLSearchParams(search.toString());
-		params.delete("id");
 		const queryString = params.toString();
-		router.push(`/mibisens?` + queryString.toString());
+		router.push(`/mibisens/edit?` + queryString.toString());
 	};
 	const handleReturn = () => {
 		const params = new URLSearchParams(search.toString());
